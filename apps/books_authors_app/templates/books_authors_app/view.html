@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Books & Authors</title>
+</head>
+<body>
+    <h1>{{title}}</h1>
+
+    <h4>ID : {{id}}</h4>
+    <h4>Descriprion : {{desc}}</h4>
+    <h4>Authors </h4>
+    <form method="POST">
+        {% csrf_token %}
+    <select name="authors">
+        <option value="author1"> Jane Austen</option>
+        <option value="author2">Emily Dickinson</option>
+        <option value="author3">Fyodor Dostoevksy</option>
+        <option value="author4">William Shakespeare</option>
+        <option value="author5">Lau Tzu</option>
+      </select>
+
+      <button type="submit" name="add" value="Add">Add</button>
+    </form>
+</body>
+</html>
